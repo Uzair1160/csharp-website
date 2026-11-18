@@ -1,0 +1,104 @@
+html.barrierefrei body {
+    background-color: #000000;
+    color: #ffff00;
+    font-size: 18px;
+}
+
+html.barrierefrei h1 {
+    color: #ffff00;
+    font-size: 38px;
+}
+html.barrierefrei h2 {
+    color: #ffff00;
+    font-size: 28px;
+    border-bottom: 2px solid #ffff00;
+}
+html.barrierefrei h3 {
+    color: #ffff00;
+    font-size: 22px;
+}
+
+/* Fliesstext und Listen */
+html.barrierefrei p {
+    color: #ffff00;
+    font-size: 18px;
+}
+html.barrierefrei li {
+    color: #ffff00;
+    font-size: 18px;
+}
+
+/* Links */
+html.barrierefrei a {
+    color: #ffff00;
+}
+html.barrierefrei a:hover {
+    color: #ffffff;
+}
+
+/* Kopfleiste */
+html.barrierefrei #kopfleiste {
+    background-color: #111111;
+}
+
+/* Navigation */
+html.barrierefrei #navigation {
+    background-color: #1a1a1a;
+}
+html.barrierefrei #navigation a {
+    color: #ffff00;
+    font-size: 18px;
+}
+html.barrierefrei #navigation a:hover {
+    color: #ffffff;
+}
+
+/* Inhaltsbereich */
+html.barrierefrei #inhalt {
+    background-color: #000000;
+}
+
+/* Fusszeile */
+html.barrierefrei #footer {
+    background-color: #1a1a1a;
+    color: #ffff00;
+    border-top: 1px solid #ffff00;
+    font-size: 16px;
+}
+
+/* Bilder-Box */
+html.barrierefrei .bild-box {
+    background-color: #1a1a1a;
+    border: 1px solid #ffff00;
+    color: #ffff00;
+    font-size: 16px;
+}
+
+/* Aktiver Navigationspunkt */
+html.barrierefrei .aktiv {
+    color: #ffff00;
+    text-decoration: underline;
+}
+
+/* Bilder und Trennlinien */
+html.barrierefrei img {
+    border: 1px solid #ffff00;
+}
+html.barrierefrei hr {
+    border-top: 1px solid #ffff00;
+}
+
+/* Barrierefrei-Button */
+html.barrierefrei #navigation button {
+    background-color: #000000;
+    border: 1px solid #ffff00;
+    border-radius: 4px;
+    color: #ffff00;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+html.barrierefrei #navigation button:hover {
+    background-color: #ffff00;
+    color: #000000;
+}
