@@ -6,8 +6,7 @@ function barrierefreiIstAn() {
     return new URLSearchParams(window.location.search).get("bf") === "1";
 }
 
-// Sofort (noch im <head>) die Klasse am <html>-Element setzen, damit es kein
-// Aufblitzen gibt. <html> existiert hier schon.
+
 document.documentElement.classList.toggle("barrierefrei", barrierefreiIstAn());
 
 // Haengt den aktuellen Zustand an alle Navigations-Links an.
@@ -44,3 +43,5 @@ function toggleBarrierefreiheit() {
         // bewusst ignoriert
     }
 }
+const bfbutton = document.getElementById("bf-button");
+bfbutton.addEventListener("click", toggleBarrierefreiheit);
