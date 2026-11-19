@@ -12,9 +12,10 @@ document.documentElement.classList.toggle("barrierefrei", barrierefreiIstAn());
 // Haengt den aktuellen Zustand an alle Navigations-Links an.
 function navLinksAktualisieren(an) {
     const links = document.querySelectorAll("#navigation a");
-    for (let i = 0; i < links.length; i++) {
-        const basis = links[i].getAttribute("href").split("?")[0];
-        links[i].setAttribute("href", basis + "?bf=" + (an ? "1" : "0"));
+
+    for (const link of links) {
+        const basis = link.getAttribute("href").split("?")[0];
+        link.setAttribute("href", basis + "?bf=" + (an ? "1" : "0"));
     }
 }
 
