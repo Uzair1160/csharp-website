@@ -36,12 +36,12 @@ function toggleBarrierefreiheit() {
     navLinksAktualisieren(neuerZustand);
 
     // URL der aktuellen Seite aktualisieren, damit der Zustand auch beim
-    // Neuladen erhalten bleibt. Faellt still aus, falls vom Browser blockiert.
+    // Neuladen erhalten bleibt.
     try {
         const url = `${window.location.href.split("?")[0]}?bf=${neuerZustand ? "1" : "0"}`;
         window.history.replaceState(null, "", url);
     } catch (e) {
-        // bewusst ignoriert
+        console.error(e.message);
     }
 }
 const bfbutton = document.getElementById("bf-button");
