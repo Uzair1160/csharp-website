@@ -22,8 +22,8 @@ function navLinksAktualisieren(an) {
 // Wird bei JEDER Anzeige der Seite ausgefuehrt - auch wenn Firefox die Seite
 // beim Zurueck-/Vor-Blaettern aus dem Cache holt. So passt der Zustand immer
 // zur URL und die Links werden korrekt gesetzt.
-window.addEventListener("pageshow", function () {
-    const an = barrierefreiIstAn();
+window.addEventListener("pageshow", () => 
+    {const an = barrierefreiIstAn();
     document.documentElement.classList.toggle("barrierefrei", an);
     navLinksAktualisieren(an);
 });
