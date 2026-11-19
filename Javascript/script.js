@@ -15,7 +15,7 @@ function navLinksAktualisieren(an) {
 
     for (const link of links) {
         const basis = link.getAttribute("href").split("?")[0];
-        link.setAttribute("href", basis + "?bf=" + (an ? "1" : "0"));
+        link.setAttribute("href", `${basis}?bf=${an ? "1" : "0"}`);
     }
 }
 
@@ -38,7 +38,7 @@ function toggleBarrierefreiheit() {
     // URL der aktuellen Seite aktualisieren, damit der Zustand auch beim
     // Neuladen erhalten bleibt. Faellt still aus, falls vom Browser blockiert.
     try {
-        const url = window.location.href.split("?")[0] + "?bf=" + (neuerZustand ? "1" : "0");
+        const url = `${window.location.href.split("?")[0]}?bf=${neuerZustand ? "1" : "0"}`;
         window.history.replaceState(null, "", url);
     } catch (e) {
         // bewusst ignoriert
