@@ -12,9 +12,9 @@ document.documentElement.classList.toggle("barrierefrei", barrierefreiIstAn());
 
 // Haengt den aktuellen Zustand an alle Navigations-Links an.
 function navLinksAktualisieren(an) {
-    var links = document.querySelectorAll("#navigation a");
-    for (var i = 0; i < links.length; i++) {
-        var basis = links[i].getAttribute("href").split("?")[0];
+    const links = document.querySelectorAll("#navigation a");
+    for (let i = 0; i < links.length; i++) {
+        const basis = links[i].getAttribute("href").split("?")[0];
         links[i].setAttribute("href", basis + "?bf=" + (an ? "1" : "0"));
     }
 }
@@ -23,14 +23,14 @@ function navLinksAktualisieren(an) {
 // beim Zurueck-/Vor-Blaettern aus dem Cache holt. So passt der Zustand immer
 // zur URL und die Links werden korrekt gesetzt.
 window.addEventListener("pageshow", function () {
-    var an = barrierefreiIstAn();
+    const an = barrierefreiIstAn();
     document.documentElement.classList.toggle("barrierefrei", an);
     navLinksAktualisieren(an);
 });
 
 // Wird vom Button aufgerufen und schaltet den Modus um.
 function toggleBarrierefreiheit() {
-    var neuerZustand = !document.documentElement.classList.contains("barrierefrei");
+    const neuerZustand = !document.documentElement.classList.contains("barrierefrei");
 
     document.documentElement.classList.toggle("barrierefrei", neuerZustand);
     navLinksAktualisieren(neuerZustand);
@@ -38,7 +38,7 @@ function toggleBarrierefreiheit() {
     // URL der aktuellen Seite aktualisieren, damit der Zustand auch beim
     // Neuladen erhalten bleibt. Faellt still aus, falls vom Browser blockiert.
     try {
-        var url = window.location.href.split("?")[0] + "?bf=" + (neuerZustand ? "1" : "0");
+        const url = window.location.href.split("?")[0] + "?bf=" + (neuerZustand ? "1" : "0");
         window.history.replaceState(null, "", url);
     } catch (e) {
         // bewusst ignoriert
